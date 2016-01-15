@@ -2,7 +2,7 @@ package kerstein.rottentomatoes;
 
 import java.io.Serializable;
 
-public class Review  implements Serializable {
+public class Review implements Serializable {
 
     private String critic;
     private String date;

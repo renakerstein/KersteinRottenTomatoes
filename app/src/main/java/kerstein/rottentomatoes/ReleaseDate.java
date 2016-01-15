@@ -2,11 +2,11 @@ package kerstein.rottentomatoes;
 
 import java.io.Serializable;
 
-public class ReleaseDate  implements Serializable {
+public class ReleaseDate implements Serializable {
 
     private String theater;
 
-    public String getTheater(){
+    public String getTheater() {
         return theater;
     }
 }

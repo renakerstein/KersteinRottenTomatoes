@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import java.io.Serializable;
 
-public class MainActivity extends AppCompatActivity implements Serializable{
+public class MainActivity extends AppCompatActivity implements Serializable {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -45,9 +45,8 @@ public class MainActivity extends AppCompatActivity implements Serializable{
         });
 
 
-        MoviesAsyncTask task= new MoviesAsyncTask(viewPager, this);
+        MoviesAsyncTask task = new MoviesAsyncTask(viewPager, this);
         task.execute();
-
 
 
     }

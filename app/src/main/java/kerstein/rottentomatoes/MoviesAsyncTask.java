@@ -24,8 +24,8 @@ public class MoviesAsyncTask extends android.os.AsyncTask<String, Void, CurrentU
     private Context context;
 
     public MoviesAsyncTask(ViewPager viewPager, Context context) {
-        this.context=context;
-        this.viewPager=viewPager;
+        this.context = context;
+        this.viewPager = viewPager;
 
     }
 
@@ -42,19 +42,15 @@ public class MoviesAsyncTask extends android.os.AsyncTask<String, Void, CurrentU
             Gson gson = new Gson();
             currentMovies = gson.fromJson(br, Movies.class);
             br.close();
-        } catch (IOException e) {
 
-        }
-
-        try {
-            URL url = new URL("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=cart6246nbex6fqchrj5t4b8&limit=25");
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            url = new URL("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=cart6246nbex6fqchrj5t4b8&limit=25");
+            connection = (HttpURLConnection) url.openConnection();
 
             // read it in
-            InputStream in = connection.getInputStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            in = connection.getInputStream();
+            br = new BufferedReader(new InputStreamReader(in));
 
-            Gson gson = new Gson();
+            gson = new Gson();
             upcoming = gson.fromJson(br, UpcomingMovies.class);
             br.close();
         } catch (IOException e) {
@@ -70,7 +66,7 @@ public class MoviesAsyncTask extends android.os.AsyncTask<String, Void, CurrentU
     protected void onPostExecute(CurrentUpcoming movie) {
         super.onPostExecute(movie);
         Movie[] currentMovies = movie.getCurrent().getMovies();
-        Movie[] upcoming=movie.getUpcoming().getMovies();
+        Movie[] upcoming = movie.getUpcoming().getMovies();
         MovieMainPagerAdapter adapter = new MovieMainPagerAdapter(movie, context);
         viewPager.setAdapter(adapter);
     }

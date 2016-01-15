@@ -2,10 +2,7 @@ package kerstein.rottentomatoes;
 
 import java.io.Serializable;
 
-/**
- * Created by elka on 1/7/2016.
- */
-public class Movie  implements Serializable {
+public class Movie implements Serializable {
 
     private String title;
     private String mpaa_rating;
@@ -49,5 +46,7 @@ public class Movie  implements Serializable {
         return links;
     }
 
-    public String getSynopsis(){return synopsis;}
+    public String getSynopsis() {
+        return synopsis;
+    }
 }

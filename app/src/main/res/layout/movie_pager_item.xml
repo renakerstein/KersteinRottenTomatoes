@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-android:orientation="vertical"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-android:layout_height="match_parent">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1">
 
-    <ImageView
-        android:id="@+id/imageV"
-        android:layout_width="600dp"
-        android:layout_height="400dp"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true" />
+        <ImageView
+            android:id="@+id/imageV"
+            android:layout_width="600dp"
+            android:layout_height="400dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true" />
 
-    <TextView
-        android:id="@+id/Vtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:textColor="@color/white"
-        android:textSize="30sp" />
+        <TextView
+            android:id="@+id/Vtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/smallImage"
@@ -45,8 +45,7 @@ android:layout_height="match_parent">
             android:layout_marginTop="120dp"
             android:layout_below="@+id/Vtitle"
             android:textSize="18sp"
-            android:textColor="@color/white"
-           />
+            android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/tomato"
@@ -84,7 +83,7 @@ android:layout_height="match_parent">
             android:layout_marginTop="120dp"
             android:textSize="18sp"
             android:textColor="@color/white"
-            android:hint="audience"/>
+            android:hint="audience" />
 
     </RelativeLayout>
 
@@ -95,26 +94,22 @@ android:layout_height="match_parent">
         android:layout_below="@+id/Vtitle" />
 
 
-
-
     <TextView
         android:id="@+id/rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/synopsis"
-        android:hint="rating"/>
+        android:hint="rating" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rate"
-        />
+        android:layout_below="@+id/rate" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/time"
-       />
+        android:layout_below="@+id/time" />
 </LinearLayout>

@@ -20,22 +20,22 @@ public class MoviesViewHolder extends RecyclerView.ViewHolder {
     private TextView runtime;
     private ImageView popcorn;
     private ImageView tomato;
-    private transient Context context;
+    private Context context;
 
     public MoviesViewHolder(View itemView, Context context) {
         super(itemView);
-        this.context=context;
+        this.context = context;
         image = (ImageView) itemView.findViewById(R.id.image);
         title = (TextView) itemView.findViewById(R.id.title);
-        popcorn= (ImageView) itemView.findViewById(R.id.popcorn);
-        tomato =(ImageView) itemView.findViewById(R.id.tomato);
+        popcorn = (ImageView) itemView.findViewById(R.id.popcorn);
+        tomato = (ImageView) itemView.findViewById(R.id.tomato);
         criticScore = (TextView) itemView.findViewById(R.id.criticts_score);
         audienceScore = (TextView) itemView.findViewById(R.id.audience_score);
-        rating= (TextView) itemView.findViewById(R.id.rating);
+        rating = (TextView) itemView.findViewById(R.id.rating);
         cast = (TextView) itemView.findViewById(R.id.cast);
         runtime = (TextView) itemView.findViewById(R.id.runtime);
 
-}
+    }
 
     public void bind(Movie movie) {
 
@@ -46,9 +46,8 @@ public class MoviesViewHolder extends RecyclerView.ViewHolder {
         criticScore.setText(String.valueOf(movie.getRatings().getCritics_score()) + "%   ");
         audienceScore.setText(String.valueOf(movie.getRatings().getAudience_score()) + "%");
         cast.setText(movie.getAbridgedCast()[0].getName() + ", " + movie.getAbridgedCast()[1].getName());
-        rating.setText(movie.getMpaa_rating()+",  ");
+        rating.setText(movie.getMpaa_rating() + ",  ");
         runtime.setText(movie.getRuntime() + " min.\n");
-
 
 
     }
